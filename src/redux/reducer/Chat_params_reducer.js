@@ -1,5 +1,5 @@
 const Chat_params_reducer=(state={
-    friend_id:"0",friend_remark:""
+    friend_id:"0",friend_remark:"",friend_imageUml:"https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
 },action)=>{
     switch (action.type) {
 
@@ -14,6 +14,13 @@ const Chat_params_reducer=(state={
             ...state,
             friend_remark: action.friend_remark
         }}
+        case "set_friend_imageUml":{
+            return{
+                ...state,
+                friend_imageUml:action.friend_imageUml
+            }
+        }
+
 
         default:return state
     }

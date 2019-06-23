@@ -93,8 +93,8 @@ class Nav extends React.Component {
             itemLayout="horizontal"
             dataSource={this.state.data}
             renderItem={item => (
-                <List.Item actions={[<button  onClick={()=>this.test(item.userID,this.props.userid,item.requestID, 1)}>同意</button>,
-                    <button onClick={()=>this.test(item.userID,this.props.userid,   item.requestID,2)}>拒绝</button>]}>
+                <List.Item actions={[<Button  onClick={()=>this.test(item.userID,this.props.userid,item.requestID, 1)}>同意</Button>,
+                    <Button onClick={()=>this.test(item.userID,this.props.userid,   item.requestID,2)}>拒绝</Button>]}>
                     <Skeleton avatar title={false} loading={item.loading} active>
 
 
@@ -102,7 +102,7 @@ class Nav extends React.Component {
                             avatar={
                                 <Avatar src={item.imageUrl} />
                             }
-                            title={<a href="#"> 用户：{item.nickname}</a>}
+                            title={<a > 用户：{item.nickname}</a>}
                             description="请求添加你为好友"
                         />
                     </Skeleton>

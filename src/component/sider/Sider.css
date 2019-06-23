@@ -7,3 +7,9 @@
     /*margin: 30px;*/
     padding-right: 30px;
 }
+
+.sider{
+    border-right-color: #305a56;
+    border-right-style: solid;
+    border-right-width: 1px;
+}

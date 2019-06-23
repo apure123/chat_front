@@ -1,4 +1,5 @@
 import React from 'react';
+import "./chat_page.css"
 import Chat_main from "../chat-main/Chat_main";
 import Sider from "../sider/Sider";
 import {Redirect }from "react-router-dom"
@@ -45,7 +46,7 @@ class Chat_page extends React.Component{
                     </div>
                     <div style={{width:"70%",float:"right",height:"100vh",display:"block",backgroundColor:"#1da57a"}}>
 
-                        <div style={{backgroundColor:"#fff", height:"7vh",float:"top"}}>
+                        <div style={{backgroundColor:"#fff", height:"7vh",float:"top"}} className={"message_header"}>
                             <h2 style={{float:"left",margin:"10px",marginLeft:"30px"}}>{this.props.chat_params_friend_remark}</h2>
 
                             <Popconfirm
@@ -55,7 +56,7 @@ class Chat_page extends React.Component{
                             disabled={this.props.friend_id==="0"}>删除消息记录</Button>
                             </Popconfirm>
                         </div>
-                        <div style={{backgroundColor:"#ff3738",height:"93vh"}}><Chat_main/></div>
+                        <div style={{backgroundColor:"#e0e7e3",height:"93vh"}}><Chat_main/></div>
 
                     </div>
 

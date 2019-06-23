@@ -43,9 +43,9 @@ class Sider extends Component{
 
     render() {
         return(
-            <div >
-                <div style={{height:"15%"}}><Head/></div>
-                <div style={{height:"85%"}}> <List_wrap/></div>
+            <div className={"sider"}>
+                <div style={{height:"15vh"}}><Head/></div>
+                <div style={{height:"85vh"}}> <List_wrap/></div>
 
             </div>
         )

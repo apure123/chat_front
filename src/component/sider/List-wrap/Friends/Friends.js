@@ -19,9 +19,12 @@ componentDidMount() {
 }
 
     //选中要聊天的好友
-    select_chat_friend=(friend_id,friend_remark)=>{
+    select_chat_friend=(friend_id,friend_remark,friend_imageUml)=>{
         this.props.set_chat_params_friend_id(friend_id)
         this.props.set_chat_params_friend_remark(friend_remark)
+        if (friend_imageUml && friend_imageUml!=="image.jpg"){
+            this.props.set_friend_imageUml(friend_imageUml)
+        }
         //切换聊天窗口的绑定数据
 
 
@@ -91,8 +94,14 @@ componentDidMount() {
                     renderItem={item => (
                         <List.Item>
                             <List.Item.Meta
-                                avatar={<span onClick={()=>this.open_friend_detail(item.friendID)}><Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /></span>}
-                                title={<a onClick={()=>this.select_chat_friend(item.friendID,item.remark)}>{item.remark}</a>}
+                                avatar={<span onClick={()=>this.open_friend_detail(item.friendID)}>
+                                    {
+                                        item.imageUrl==="image.jpg"?<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                                        :
+                                            <Avatar src={item.imageUrl} />
+                                    }
+                                    </span>}
+                                title={<a onClick={()=>this.select_chat_friend(item.friendID,item.remark,item.imageUrl)}>{`备注：${item.remark}`}</a>}
                                 description={`这个好友的id为:${item.friendID}`}
                             />
                             <Popconfirm
@@ -133,6 +142,7 @@ function mapDispatchToProps(dispatch){
         set_select_friend_id:(select_friend_id)=>{dispatch({type:"set_select_friend_id",select_friend_id:select_friend_id})},
         set_chat_params_friend_id:(friend_id)=>{dispatch({type:"set_chat_params_friend_id",friend_id:friend_id})},
         set_chat_params_friend_remark:(friend_remark)=>{dispatch({type:"set_chat_params_friend_remark",friend_remark:friend_remark})},
+        set_friend_imageUml:(friend_imageUml)=>{dispatch({type:"set_friend_imageUml",friend_imageUml:friend_imageUml})}
     }
 }
 

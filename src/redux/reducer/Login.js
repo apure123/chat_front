@@ -1,5 +1,5 @@
 const Login_reducer=(state={
-    loginflag:false,uid:8,regflag:false,nickname:"",account:""
+    loginflag:false,uid:8,regflag:false,nickname:"",account:"",my_imageUrl:"https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
 },action)=>{
     switch (action.type) {
         case "login":{
@@ -28,6 +28,12 @@ const Login_reducer=(state={
             return{
                 ...state,
                 regflag:false
+            }
+        }
+        case"set_my_imageUrl":{
+            return{
+                ...state,
+                my_imageUrl:action.my_imageUrl
             }
         }
         default:return state

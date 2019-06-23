@@ -38,12 +38,12 @@ class Head extends Component{
     }
     render() {
         return(
-            <div>
-            <div style={{display:"flex",margin:"10px",padding:"10px"}}>
-                <MyInfo/>
+            <div style={{height:"100%",margin:"auto"}}>
+            <div style={{display:"flex",margin:"auto 10px",padding:"10px",height:"100%"}}>
+                <MyInfo style={{margin:"auto"}} />
                 <h2 style={{margin:"auto",marginLeft:"20px"}}>{this.props.nickname}</h2>
 
-                <Button onClick={()=>this.quit()}>退出</Button>
+                <Button style={{margin:"auto"}} onClick={()=>this.quit()}>退出</Button>
             </div>
 
             </div>

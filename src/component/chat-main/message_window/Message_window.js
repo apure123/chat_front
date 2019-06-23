@@ -22,10 +22,25 @@ class Message_window extends Component{
 
 
     render() {
-               /* console.log("聊天记录数的长度：")
-        console.log(this.props.all_message[this.props.message_perfriend_Key].messageList.length)
-        console.log("聊天记录")
-        console.log([...this.props.all_message[this.props.message_perfriend_Key].messageList])*/
+        let my_image_url=this.props.my_imageUrl
+                if (my_image_url==="image.jpg") {
+                    my_image_url="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+                }
+                //
+                let friend_image_url="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+        friend_image_url=this.props.friend_imageUml
+
+       /* //遍历this.props.friend_list找出friend_image_url
+        for (let i = 0; i <this.props.friend_list.length ; i++) {
+            if (this.props.friend_list.length[i].friendID===this.props.friend_id){
+                if (this.props.friend_list.length[i].imageUrl&&this.props.friend_list.length[i].imageUrl!=="image.jpg") {
+                   //设置朋友的头像url
+                    friend_image_url=this.props.friend_list.length[i].imageUrl
+                }
+            }
+        }*/
+
+
         var message_perfriend_Key=this.props.get_messageKey_by_friend_id(this.props.friend_id)
         return(
 
@@ -42,7 +57,9 @@ class Message_window extends Component{
                             >
                                 {
                                     item.type==="image"?
-                                        <img src={item.content} style={{width:"95%",backgroundColor:"#fff",float:"right",margin:"10px",padding:"10px",borderRadius:"5px"}}/>
+                                        <div style={{width:"95%"}}>
+                                        <img style={{width:"50%",backgroundColor:"#ffffff",float:"right",margin:"10px",padding:"10px",borderRadius:"5px"}} src={item.content} />
+                                        </div>
                                     :
                                         <p style={{
                                             width:"95%",backgroundColor:"#fff",float:"right",margin:"10px",padding:"10px",borderRadius:"5px"
@@ -50,24 +67,20 @@ class Message_window extends Component{
                                         }}
                                         >{item.content}</p>
                                 }
-                                {/*<p style={{
-                                    width:"95%",backgroundColor:"#fff",float:"right",margin:"10px",padding:"10px",borderRadius:"5px"
-                                    ,wordWrap:"break-word",wordBreak:"break-all"
-                                }}
-                                >{item.content}</p>*/}
-
                                 <div style={{float:"right"}}>
-                                    <Avatar  src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                                    <Avatar  src={my_image_url} />
                                 </div>
                             </List.Item>
                             :
                             <List.Item style={{width:"60%",float:"left",margin:"10px"}}>
                                 <div style={{float:"left"}}>
-                                    <Avatar  src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                                    <Avatar  src={friend_image_url} />
                                 </div>
                                 {
                                     item.type==="image"?
-                                        <img src={item.content} style={{width:"95%",backgroundColor:"#fff",float:"right",margin:"10px",padding:"10px",borderRadius:"5px"}}/>
+                                        <div style={{width:"50%",marginLeft:"10px"}}>
+                                        <img style={{width:"95%",backgroundColor:"#ffffff",float:"right",margin:"10px",padding:"10px",borderRadius:"5px"}} src={item.content} />
+                                        </div>
                                         :
                                         <p style={{
                                             width:"100%",backgroundColor:"#1da57a",float:"left",margin:"10px",padding:"10px",borderRadius:"5px"
@@ -96,7 +109,9 @@ class Message_window extends Component{
     return{
         /*message:state.message*/
         all_message:[...state.message.all_message],
-        messageList:[...state.message.all_message]
+        messageList:[...state.message.all_message],
+        my_imageUrl:state.login.my_imageUrl,
+        friend_imageUml:state.chat_params.friend_imageUml
     }
 }
 

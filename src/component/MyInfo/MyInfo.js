@@ -18,13 +18,16 @@ class MyInfo extends React.Component{
                 imageUrl:""
             }
         };
+        this.get_my_info()
     }
 
     componentDidMount() {
         this.get_my_info()
     }
 
+
     showModal = () => {
+        this.get_my_info()
         this.setState({
             visible: true,
 
@@ -59,6 +62,8 @@ class MyInfo extends React.Component{
                 console.log(response);
                 if (response.data[0]){
                     this.setState({myinfo:response.data[0]})
+                    //顺便把my_imageUrl存起来
+                    this.props.set_my_imageUrl(response.data[0].imageUrl)
                 }
 
             })
@@ -68,13 +73,19 @@ class MyInfo extends React.Component{
             })
 
 
+
+
     }
 
     render() {
         return(
-            <div>
+            <div style={{margin:"auto"}}>
                 <span onClick={this.showModal}>
-                    <Avatar shape="square" size={64} icon="user" />
+                    {this.state.myinfo.imageUrl?<Avatar src={this.state.myinfo.imageUrl} />
+                    :<Avatar shape="square" size={64} icon="user" />
+                    }
+
+
                 </span>
                 <Modal
                     title="我的个人信息"
@@ -82,6 +93,10 @@ class MyInfo extends React.Component{
                     onOk={this.handleOk}
                     onCancel={this.handleCancel}
                 >
+                    {this.state.myinfo.imageUrl&&this.state.myinfo.imageUrl!=="image.jpg"?<img src={this.state.myinfo.imageUrl}/>:
+                        <Avatar shape="square" size={48} icon="user" />}
+                        <br/>
+                        <br/>
                     <p>{`账号：${this.state.myinfo.account}`}</p>
                     <p>{`ID：${this.props.userID}`}</p>
                     <p>{`昵称：${this.state.myinfo.nickname}`}</p>
@@ -104,7 +119,7 @@ function mapStateToProps(state)
 
 function mapDispatchToProps(dispatch){
     return{
-
+        set_my_imageUrl:(my_imageUrl)=>{dispatch({type:"set_my_imageUrl",my_imageUrl:my_imageUrl})}
     }
 }
 MyInfo=connect(mapStateToProps,mapDispatchToProps)(MyInfo)

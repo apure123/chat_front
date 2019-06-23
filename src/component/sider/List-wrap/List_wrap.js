@@ -82,7 +82,7 @@ class List_wrap extends Component{
                             </Menu.Item>
                         </Menu>
                     </Header>
-                    <Content className={"list_wrap"}>
+                    <Content className={"list_wrap"} style={{backgroundColor:"#f0f0f0"}}>
                         {this.state.selectkey==="1"?<div>
                             <Message_list  get_friend_data={this.get_friend_data}/>
                         </div>:<div></div>}
@@ -94,7 +94,7 @@ class List_wrap extends Component{
                         </div>:<div></div>}
 
                     </Content>
-                    <Footer style={{height:"7vh",backgroundColor:"#9da49b"}}>
+                    <Footer style={{height:"7vh",backgroundColor:"#305a56",padding:"12px 50px"}}>
                         <Button size={"small"} style={{marginRight:"10px",float:"left"}} onClick={()=>this.props.set_update_info_visible(true)}>编辑个人信息</Button>
                         <Add_friend/>
                     </Footer>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button, Checkbox, Icon, Input,Form,Drawer,message,Radio} from "antd";
+import {Button, Checkbox, Icon, Input,Form,Drawer,message,Radio,Upload} from "antd";
 import {connect} from "react-redux";
 import axios from "axios"
 import ajax_url from "../../ajax/ajax_url";
@@ -31,14 +31,63 @@ const tailFormItemLayout = {
 };
 
 
+function getBase64(img, callback) {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => callback(reader.result));
+    reader.readAsDataURL(img);
+}
+
+function beforeUpload(file) {
+    const isJPG = file.type === 'image/jpeg';
+    if (!isJPG) {
+        message.error('You can only upload JPG file!');
+    }
+    const isLt2M = file.size / 1024 / 1024 < 2;
+    if (!isLt2M) {
+        message.error('Image must smaller than 2MB!');
+    }
+
+    return false;
+}
+
+
+
 class Update_info extends Component{
 
     state = {
         confirmDirty: false,
         autoCompleteResult: [],
-        value: 1,
+        value: 0,
+        loading: false,
     };
 
+    //头像相关函数
+    beforeUpload=(file)=> {
+        const isJPG = file.type === 'image/jpeg';
+        if (!isJPG) {
+            message.error('You can only upload JPG file!');
+        }
+        const isLt2M = file.size / 1024 / 1024 < 2;
+        if (!isLt2M) {
+            message.error('Image must smaller than 2MB!');
+        }
+
+        //获取图片base64
+        if (isJPG && isLt2M){
+            getBase64(file, imageUrl =>{
+                this.setState({
+                    imageUrl,
+                    loading: false,
+                })
+                /* console.log("我们成功获取到了这个图片的base64")
+                 console.log(imageUrl)*/
+            })
+        }
+
+        return false;
+    }
+
+    //下面是表单相关函数
 
     showDrawer = () => {
         this.setState({
@@ -67,7 +116,7 @@ class Update_info extends Component{
         /*this.get_friend_data()*/
     }
 
-    //向后端提交修改个人信息的接口
+    //向后端提交修改个人信息的接口(并且加上头像数据判断)
     edit_friend_submit=(userID,nickname,password,signature, imageUrl,email,gender)=>{
         var fd = new FormData();
         fd.append("userID",userID);
@@ -77,6 +126,9 @@ class Update_info extends Component{
         fd.append("imageUrl",imageUrl);
         fd.append("email",email);
         fd.append("gender",gender);
+        if(this.state.imageUrl){
+            fd.append("imageurl",this.state.imageUrl);
+        }
         let config = {
             headers: {
                 'Content-Type':'multipart/form-data',
@@ -147,6 +199,12 @@ class Update_info extends Component{
     render() {
         const { getFieldDecorator } = this.props.form;
         const { TextArea } = Input;
+        const uploadButton = (
+            <div>
+                <Icon type={this.state.loading ? 'loading' : 'plus'} />
+                <div className="ant-upload-text">Upload</div>
+            </div>
+        );
         return(
             <div >
                 <Drawer
@@ -160,6 +218,20 @@ class Update_info extends Component{
 
                     <Form {...formItemLayout}  onSubmit={this.handle_edit_friend}>
 
+                        <Form.Item label={"头像"} >
+                        <Upload
+                            name="avatar"
+                            listType="picture-card"
+                            /*className="avatar-uploader"*/
+                            showUploadList={false}
+
+                            beforeUpload={this.beforeUpload}
+                            /*onChange={this.handleChange}*/
+                            style={{float:"left"}}
+                        >
+                            {this.state.imageUrl ? <img src={this.state.imageUrl} alt="avatar" /> : uploadButton}
+                        </Upload>
+                        </Form.Item>
 
                         <Form.Item label={"昵称"} >
                             {getFieldDecorator('nickname', {

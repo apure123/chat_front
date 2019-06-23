@@ -39,6 +39,7 @@ function beforeUpload(file) {
 
 class Chat_main extends React.Component{
 
+    //构造器，包含ws的事件函数
     constructor(props) {
         super(props);
         this.state={
@@ -65,9 +66,14 @@ class Chat_main extends React.Component{
                 this.props.add_message(permessage.data,"other",this.props.friend_id,"text")
             }
             else if(permessage.type==="say_img"){
-                this.props.add_message(evt.img_name,"other",this.props.friend_id,"text")
+                /*console.log(permessage)
+                console.log("++++++++++++++++++这里收到了一个图片+++++++++++++++++++++++++++++++++")
+                console.log(permessage.data)*/
+                this.props.add_message(permessage.data,"other",this.props.friend_id,"image")
             }
-            else {this.props.add_message(evt.data,"other",this.props.friend_id,"text")}
+            else {//其他的数据类型，比如说save
+                /*this.props.add_message(permessage.data,"other",this.props.friend_id,"text")*/
+            }
 
         };
 
@@ -89,6 +95,7 @@ class Chat_main extends React.Component{
         this.get_history_message(this.props.userID,this.props.friend_id)
     }
 
+    //ws发送绑定信息
     bind=()=>
     {
         var data={type:"bind",fromid:this.props.userID,toid:this.props.friend_id}
@@ -99,8 +106,6 @@ class Chat_main extends React.Component{
         }
 
     }
-
-
 
     //发送文本消息
     send=(userID,toid)=>{
@@ -113,15 +118,15 @@ class Chat_main extends React.Component{
     }
 
     //发送图片
-    send_image=(userID,toid)=>{
+    send_image=(userID,toid,imageUrl)=>{
         /*this.props.add_message(this.props.form.getFieldValue("message_input"),"me",toid)*/
-        let senddata={type:"say_img",data:this.state.imageUrl,
+        let senddata={type:"say_img",data:imageUrl,
             fromid:userID,toid:toid}
         let senddata_s=JSON.stringify(senddata)
         console.log(senddata_s)
         ws.send(senddata_s)
         //加到消息窗口
-        this.props.add_message(this.state.imageUrl,"me",this.props.friend_id,"image")
+        this.props.add_message(imageUrl,"me",this.props.friend_id,"image")
 
 }
 
@@ -181,6 +186,31 @@ class Chat_main extends React.Component{
         }
     };
 
+    //直接在这个函数里面获取base64
+    beforeUpload=(file)=> {
+        const isJPG = file.type === 'image/jpeg';
+        if (!isJPG) {
+            message.error('You can only upload JPG file!');
+        }
+        const isLt2M = file.size / 1024 / 1024 < 2;
+        if (!isLt2M) {
+            message.error('Image must smaller than 2MB!');
+        }
+
+        //获取图片base64
+        if (isJPG && isLt2M){
+            getBase64(file, imageUrl =>{
+                this.setState({
+                    imageUrl,
+                    loading: false,
+                })
+                this.send_image(this.props.userID,this.props.friend_id,imageUrl)
+            })
+
+        }
+        return isJPG && isLt2M;
+    }
+
     render() {
         const { getFieldDecorator } = this.props.form
 
@@ -214,9 +244,9 @@ class Chat_main extends React.Component{
                             /*listType="picture-card"*/
                             className="avatar-uploader"
                             showUploadList={false}
-                            action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-                            beforeUpload={beforeUpload}
-                            onChange={this.handleChange}
+                            /*action="https://www.mocky.io/v2/5cc8019d300000980a055e76"*/
+                            beforeUpload={this.beforeUpload}
+                            /*onChange={this.handleChange}*/
                             style={{float:"right"}}
 
                         >
