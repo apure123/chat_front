@@ -1,0 +1,65 @@
+.list {
+    overflow: hidden;
+    height: 455px;
+    overflow: hidden;
+    position: relative;
+}
+.scroll-wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: transparent;
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+.list li.active {
+    background-color: #464e55;
+}
+.list li {
+    padding: 13px 15px;
+    border-bottom: 1px solid #292C33;
+    cursor: pointer;
+    transition: background-color .1s;
+    position: relative;
+}
+.list .avatar, .list .avatar img {
+    border-radius: 5px;
+}
+.list .avatar {
+    display: inline-block;
+    margin: 0;
+    background: #f1f1f1;
+}
+.list .name {
+    display: inline-block;
+    margin: 0 0 0 15px;
+    max-width: 110px;
+}
+
+.list_wrap{
+    display: block;
+    overflow-x:hidden;
+    overflow-y: scroll;
+    height: 70vh;
+    padding: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+}

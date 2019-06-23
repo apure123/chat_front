@@ -1,0 +1,40 @@
+.Login{
+    background: url("../../image/登录1.jpg") no-repeat;
+    background-size: cover;
+
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+    /*padding: 100px;*/
+}
+.login{
+    width:25%;
+    height: 100%;
+    float:right;
+    background-color: rgba(178,178,178,0.5);
+}
+
+.register-form{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(178,178,178,0.25);
+    margin-top: 10%;
+
+    padding: 20px;
+
+}
+
+
+.register-input{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo{
+    float: left;
+}
+
+.close{
+    float: right;
+}

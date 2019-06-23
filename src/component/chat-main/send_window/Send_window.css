@@ -1,0 +1,45 @@
+.send {
+    height: 160px;
+    border-top: solid 1px #ddd;
+    background: #fff;
+}
+.send textarea {
+    padding: 10px;
+    height: 73%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: "Micrsofot Yahei";
+    resize: none;
+}
+.send .hadler {
+    padding: 5px 15px;
+    position: relative;
+}
+.send .hadler button {
+    border: solid 1px #ddd;
+    padding: 6px 10px;
+    background: #303942;
+    border-radius: 3px;
+    color: #fff;
+}
+.fl {
+    float: left;
+    display: inline-block;
+}
+.fr {
+    float: right;
+    display: inline-block;
+}
+.send .hadler .tips {
+    display: none;
+    position: absolute;
+    right: 8px;
+    bottom: 50px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 13px;
+    padding: 5px 10px;
+    box-shadow: 1px 1px 3px #d8d8d8;
+}

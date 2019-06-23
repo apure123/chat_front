@@ -1,0 +1,36 @@
+.card {
+    padding: 26px 15px 23px;
+    border-bottom: solid 1px #24272C;
+}
+.user {
+    padding: 0 0 15px 11px;
+}
+.avatar {
+    width: 47px;
+    height: 47px;
+    border-radius: 100px;
+    border: 1px solid #fff;
+    background-color: #ccc;
+}
+.card .name {
+    display: inline-block;
+    margin: 0 0 0 15px;
+    font-size: 22px;
+}
+ .card .search {
+    padding: 0 10px;
+    width: 100%;
+    font-size: 12px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC40lEQ…DUKNXFdeg1eey4WIDc3rIFyLXUXPdtPTCXZXPX3XgP/AYiBEtAY5tifgAAAABJRU5ErkJggg==);
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+    background-position: 95% 50%;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    border: solid 1px #4b4949;
+    border-radius: 100px;
+    outline: none;
+    background-color: #26292E;
+}
+

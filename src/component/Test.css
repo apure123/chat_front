@@ -1,0 +1,118 @@
+.testcontainer{
+    display: block;
+    width: 100%;
+    height: 100%;
+    /*padding: 30px;*/
+}
+.my-chat-box{
+    position: absolute;
+    display: flex;
+    background: #4b4949;
+    width: 70%;
+    height: 90%;
+}
+.chat-textarea-box {
+    width: 100%;
+    height: 20vh;
+    position: absolute;
+    min-height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    float: left;
+    top: 40px;
+    left: 0px;
+}
+.chat-input-wrapper {
+    position: fixed;
+    z-index: 1200;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 0px 0px;
+}
+.my-chat-box .chat-input-wrapper{
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+    top:60vh;
+    left: 0px;
+    display: flex;
+}
+.chat-input-wrapper .chat-input {
+    width: 100%;
+    margin: 0px;
+    padding: 0px 10px;
+    color: #333;
+    position: absolute;
+    z-index: 0;
+     height: 15vh;
+    line-height: 32px;
+    font-size: 18px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #edf5f8;
+    border: none;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+}
+.my-chat-box .massage-container {
+    position:absolute;
+    background: #f0f2f5;
+    box-sizing: border-box;
+    overflow: hidden;
+    top:0vh;
+    height: 60vh;
+}
+.my-chat-box .massage-container .message-list-wrapper {
+    display: block;
+
+    padding: 10px;
+
+    /*padding-bottom: 10vh;*/
+    /*margin-top: -30px;*/
+    /*background-color: #f0f2f5;*/
+    height: 100%;
+
+
+}
+.emoji-box {
+    position: absolute;
+    left: 0px;
+    width: 50vh;
+    height: 20vh;
+    top: -14vh;
+}
+.emoji-box .emoji-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 10px;
+    bottom:10px;
+
+}
+.chat-textarea-box {
+    width: 100%;
+    height: 14vh;
+    position: absolute;
+    min-height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    float: left;
+    top:40px;
+}
+.submit-box {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    top: 110px;
+    z-index: 1;
+    background: linear-gradient(120deg,#3bacee,#32c4d3);
+    box-shadow: -3px 2px 2px rgba(18,111,112,.2);
+    border-radius: 50%;
+}
