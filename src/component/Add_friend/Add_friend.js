@@ -78,7 +78,7 @@ class Add_friend extends React.Component{
     render() {
         return(
             <div style={{display:"flex",width:"100px",float:"right"}}>
-                <Button size={"small"} onClick={this.showModal}>
+                <Button ghost size={"small"} onClick={this.showModal}>
                     添加好友
                 </Button>
                 <Modal

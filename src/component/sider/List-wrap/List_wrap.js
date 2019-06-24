@@ -21,7 +21,7 @@ class List_wrap extends Component{
     constructor(props) {
         super(props);
         this.state={
-            selectkey:"1"
+            selectkey:"2"
         }
         this.get_friend_data()
 
@@ -68,10 +68,10 @@ class List_wrap extends Component{
                                   this.setState({selectkey:key})
                               }}
                         >
-                            <Menu.Item key="1" >
+                            {/*<Menu.Item key="1" >
                                 <Icon type="message" />
                                 消息
-                            </Menu.Item>
+                            </Menu.Item>*/}
                             <Menu.Item key="2">
                                 <Icon type="user" />
                                 好友
@@ -83,9 +83,9 @@ class List_wrap extends Component{
                         </Menu>
                     </Header>
                     <Content className={"list_wrap"} style={{backgroundColor:"#f0f0f0"}}>
-                        {this.state.selectkey==="1"?<div>
+                        {/*{this.state.selectkey==="1"?<div>
                             <Message_list  get_friend_data={this.get_friend_data}/>
-                        </div>:<div></div>}
+                        </div>:<div></div>}*/}
                         {this.state.selectkey==="2"?<div>
                          <Friends data={this.props.friend_list} get_friend_data={this.get_friend_data}/>
                         </div>:<div></div>}
@@ -95,7 +95,7 @@ class List_wrap extends Component{
 
                     </Content>
                     <Footer style={{height:"7vh",backgroundColor:"#305a56",padding:"12px 50px"}}>
-                        <Button size={"small"} style={{marginRight:"10px",float:"left"}} onClick={()=>this.props.set_update_info_visible(true)}>编辑个人信息</Button>
+                        <Button ghost size={"small"} style={{marginRight:"10px",float:"left"}} onClick={()=>this.props.set_update_info_visible(true)}>编辑个人信息</Button>
                         <Add_friend/>
                     </Footer>
 

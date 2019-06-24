@@ -43,7 +43,7 @@ class Head extends Component{
                 <MyInfo style={{margin:"auto"}} />
                 <h2 style={{margin:"auto",marginLeft:"20px"}}>{this.props.nickname}</h2>
 
-                <Button style={{margin:"auto"}} onClick={()=>this.quit()}>退出</Button>
+                <Button ghost style={{margin:"auto"}} onClick={()=>this.quit()}>退出</Button>
             </div>
 
             </div>
