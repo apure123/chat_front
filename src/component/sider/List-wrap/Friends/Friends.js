@@ -3,7 +3,7 @@ import {connect} from "react-redux"
 import axios from 'axios';
 import { Layout, Menu, Avatar,Icon ,List,Button,Popconfirm } from "antd";
 import FriendDetail from "../../../FriendDetail/FriendDetail";
-import ajax_url from "../../../../ajax/ajax_url";
+import ajax_url from "../../../../server_config/ajax_url";
 import Friend_edit from "../../../Chat_page/chat_page";
 
 

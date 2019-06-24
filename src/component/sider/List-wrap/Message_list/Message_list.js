@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {connect} from "react-redux"
 import axios from 'axios';
 import { Layout, Menu, Avatar,Icon ,List} from 'antd';
-import ajax_url from "../../../../ajax/ajax_url";
+import ajax_url from "../../../../server_config/ajax_url";
 
 
 
@@ -15,9 +15,12 @@ class Message_list extends Component{
 
 
     //选中要聊天的好友
-    select_chat_friend=(friend_id,friend_remark)=>{
+    select_chat_friend=(friend_id,friend_remark,friend_imageUml)=>{
         this.props.set_chat_params_friend_id(friend_id)
         this.props.set_chat_params_friend_remark(friend_remark)
+        if (friend_imageUml && friend_imageUml!=="image.jpg"){
+            this.props.set_friend_imageUml(friend_imageUml)
+        }
         //切换聊天窗口的绑定数据
 
 
@@ -87,9 +90,13 @@ class Message_list extends Component{
                         <List.Item>
                             <List.Item.Meta
                                 avatar={<span onClick={()=>this.open_friend_detail(item.contact)}>
-                                    <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                                    {item.imageurl&&item.imageurl!=="image.jpg"?
+                                        <Avatar src={item.imageurl} />:
+                                        <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                                    }
+
                                 </span>}
-                                title={<a onClick={()=>this.select_chat_friend(item.contact,item.remark)}>{item.remark}</a>}
+                                title={<a onClick={()=>this.select_chat_friend(item.contact,item.remark,item.imageurl)}>{`备注：${item.remark}`}</a>}
                                 description={item.type==="1"?`${item.text}`:"[图片]"}
                             />
                         </List.Item>
@@ -121,7 +128,8 @@ function mapDispatchToProps(dispatch){
         set_select_friend_id:(select_friend_id)=>{dispatch({type:"set_select_friend_id",select_friend_id:select_friend_id})},
         set_chat_params_friend_id:(friend_id)=>{dispatch({type:"set_chat_params_friend_id",friend_id:friend_id})},
         set_chat_params_friend_remark:(friend_remark)=>{dispatch({type:"set_chat_params_friend_remark",friend_remark:friend_remark})},
-        set_contact_list:(contact_list)=>{dispatch({type:"set_contact_list",contact_list:contact_list})}
+        set_contact_list:(contact_list)=>{dispatch({type:"set_contact_list",contact_list:contact_list})},
+    set_friend_imageUml:(friend_imageUml)=>{dispatch({type:"set_friend_imageUml",friend_imageUml:friend_imageUml})}
 
     }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Button, Checkbox, Icon, Input,Form,message} from "antd";
 import {connect} from "react-redux";
 import axios from "axios"
-import ajax_url from "../../ajax/ajax_url";
+import ajax_url from "../../server_config/ajax_url";
 
 const formItemLayout = {
     labelCol: {

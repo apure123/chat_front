@@ -3,9 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="1b14b5c0-83fd-4b41-8f08-e17c65d7ce2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ajax/ajax_function/Get_friend_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server_config/ajax_function/Get_friend_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ajax/ajax_url.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server_config/ajax_url.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Add_friend/Add_friend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Add_friend/Add_friend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Chat_page/chat_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Chat_page/chat_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/FriendDetail/Detail_body.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/FriendDetail/Detail_body.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/FriendDetail/Friend_edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/FriendDetail/Friend_edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Login/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Login/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/MyInfo/MyInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/MyInfo/MyInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/chat-main/Chat_main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/chat-main/Chat_main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/chat-main/message_window/Message_window.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/chat-main/message_window/Message_window.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/sider/Head/Head.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/sider/Head/Head.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/sider/List-wrap/Friends/Friends.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/sider/List-wrap/Friends/Friends.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/sider/List-wrap/List_wrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/sider/List-wrap/List_wrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/sider/List-wrap/Message_list/Message_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/sider/List-wrap/Message_list/Message_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/sider/List-wrap/New_Friends/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/sider/List-wrap/New_Friends/nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/update_info/Update_info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/update_info/Update_info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Store.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/sider/List-wrap/List_wrap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="142">
+              <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="87" selection-end-column="43" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
                 <element signature="n#!!block;n#constructor#0;n#List_wrap#0" />
@@ -33,31 +48,42 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/component/Add_friend/Add_friend.js">
+        <entry file="file://$PROJECT_DIR$/src/component/sider/List-wrap/Message_list/Message_list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+            <state relative-caret-position="2592">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/component/sider/List-wrap/List-wrap.css">
+        <entry file="file://$PROJECT_DIR$/src/redux/Store.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="216">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
               <folding>
-                <element signature="e#6#96#0" />
-                <element signature="e#113#235#0" />
-                <element signature="e#246#689#0" />
-                <element signature="e#706#740#0" />
-                <element signature="e#750#898#0" />
-                <element signature="e#932#959#0" />
-                <element signature="e#974#1044#0" />
-                <element signature="e#1057#1133#0" />
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/component/chat-main/Chat_main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="298" lean-forward="true" selection-start-line="298" selection-end-line="298" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+                <element signature="n#!!block;n#getBase64#0" />
+                <element signature="n#!!block;n#beforeUpload#0" />
+                <element signature="n#!!block;n#constructor#0;n#Chat_main#0" />
+                <element signature="n#!!block;n#componentDidMount#0;n#Chat_main#0" />
+                <element signature="n#!!block;n#componentDidUpdate#0;n#Chat_main#0" />
+                <element signature="e#7037#9137#0" />
               </folding>
             </state>
           </provider>
@@ -66,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/redux/reducer/Chat_params_reducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="16" column="33" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="33" />
+            <state relative-caret-position="513">
+              <caret line="19" column="54" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -75,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/sider/List-wrap/Friends/Friends.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+            <state relative-caret-position="399">
+              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="26" selection-end-column="9" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -87,22 +113,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/chat-main/message_window/Message_window.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+            <state relative-caret-position="432">
+              <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="45" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/component/sider/Sider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1120">
-              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#1947#3139#0" />
               </folding>
             </state>
           </provider>
@@ -123,7 +138,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/MyInfo/MyInfo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="1755">
               <caret line="65" column="72" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="72" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -133,10 +148,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/redux/reducer/Login.js">
+        <entry file="file://$PROJECT_DIR$/src/component/Add_friend/Add_friend.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="980">
-              <caret line="35" column="46" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="46" />
+            <state relative-caret-position="437">
+              <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -167,7 +185,6 @@
         <option value="$PROJECT_DIR$/src/component/store.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
-        <option value="$PROJECT_DIR$/src/redux/Store.js" />
         <option value="$PROJECT_DIR$/src/component/chat-main/message_window/Message_window.css" />
         <option value="$PROJECT_DIR$/src/redux/reducer/Friend_List.js" />
         <option value="$PROJECT_DIR$/src/redux/reducer/new_friend_list_reducer.js" />
@@ -188,12 +205,10 @@
         <option value="$PROJECT_DIR$/src/redux/reducer/Disflag_reducer.js" />
         <option value="$PROJECT_DIR$/src/redux/reducer/Contact_reducer.js" />
         <option value="$PROJECT_DIR$/src/redux/reducer/Root_reducer.js" />
-        <option value="$PROJECT_DIR$/src/component/sider/List-wrap/Message_list/Message_list.js" />
         <option value="$PROJECT_DIR$/src/component/chat-main/Chat_main.css" />
         <option value="$PROJECT_DIR$/src/redux/reducer/Message_reducer.js" />
         <option value="$PROJECT_DIR$/src/component/sider/List-wrap/New_Friends/nav.js" />
         <option value="$PROJECT_DIR$/src/component/update_info/Update_info.js" />
-        <option value="$PROJECT_DIR$/src/component/chat-main/Chat_main.js" />
         <option value="$PROJECT_DIR$/src/component/sider/Sider.js" />
         <option value="$PROJECT_DIR$/src/component/sider/List-wrap/List-wrap.css" />
         <option value="$PROJECT_DIR$/src/component/sider/Sider.css" />
@@ -202,11 +217,14 @@
         <option value="$PROJECT_DIR$/src/redux/reducer/Login.js" />
         <option value="$PROJECT_DIR$/src/component/MyInfo/MyInfo.js" />
         <option value="$PROJECT_DIR$/src/redux/reducer/Chat_params_reducer.js" />
-        <option value="$PROJECT_DIR$/src/component/chat-main/message_window/Message_window.js" />
         <option value="$PROJECT_DIR$/src/component/sider/List-wrap/Friends/Friends.js" />
         <option value="$PROJECT_DIR$/src/component/sider/Head/Head.js" />
         <option value="$PROJECT_DIR$/src/component/Add_friend/Add_friend.js" />
         <option value="$PROJECT_DIR$/src/component/sider/List-wrap/List_wrap.js" />
+        <option value="$PROJECT_DIR$/src/component/chat-main/message_window/Message_window.js" />
+        <option value="$PROJECT_DIR$/src/component/sider/List-wrap/Message_list/Message_list.js" />
+        <option value="$PROJECT_DIR$/src/redux/Store.js" />
+        <option value="$PROJECT_DIR$/src/component/chat-main/Chat_main.js" />
       </list>
     </option>
   </component>
@@ -255,6 +273,21 @@
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="chat-main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="front" type="b2602c69:ProjectViewProjectNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="chat-main" type="462c0819:PsiDirectoryNode" />
+              <item name="message_window" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="front" type="b2602c69:ProjectViewProjectNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
               <item name="Chat_page" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -262,40 +295,7 @@
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="MyInfo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
               <item name="sider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="sider" type="462c0819:PsiDirectoryNode" />
-              <item name="List-wrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="sider" type="462c0819:PsiDirectoryNode" />
-              <item name="List-wrap" type="462c0819:PsiDirectoryNode" />
-              <item name="Friends" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="sider" type="462c0819:PsiDirectoryNode" />
-              <item name="List-wrap" type="462c0819:PsiDirectoryNode" />
-              <item name="Message_list" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="front" type="b2602c69:ProjectViewProjectNode" />
@@ -412,17 +412,19 @@
       <workItem from="1560997393461" duration="14271000" />
       <workItem from="1561162760564" duration="40861000" />
       <workItem from="1561250261060" duration="43089000" />
-      <workItem from="1561337269129" duration="940000" />
+      <workItem from="1561337269129" duration="1437000" />
+      <workItem from="1561348458460" duration="4731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254916000" />
+    <option name="totallyTimeSpent" value="260144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12012645" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12012645" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -436,7 +438,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2624729" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.26218852" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -501,9 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/chat-main/message_window/Message_window.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../前端其他组件/nav.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1990">
@@ -540,16 +539,6 @@
           <caret line="9" column="44" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="44" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/Store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -595,7 +584,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ajax/ajax_function/Get_friend_list.js">
+    <entry file="file://$PROJECT_DIR$/src/server_config/ajax_function/Get_friend_list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="3" selection-end-column="38" />
@@ -709,7 +698,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ajax/ajax_url.js">
+    <entry file="file://$PROJECT_DIR$/src/server_config/ajax_url.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="37" selection-start-column="16" selection-end-column="37" />
@@ -759,16 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/sider/List-wrap/Message_list/Message_list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2457">
-          <caret line="91" column="49" selection-start-line="91" selection-start-column="49" selection-end-line="91" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/sider/Sider.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -794,55 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/chat-main/Chat_main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4536">
-          <caret line="226" column="41" selection-start-line="226" selection-start-column="32" selection-end-line="226" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <element signature="n#!!block;n#getBase64#0" />
-            <element signature="n#!!block;n#beforeUpload#0" />
-            <element signature="n#!!block;n#constructor#0;n#Chat_main#0" />
-            <element signature="n#!!block;n#componentDidMount#0;n#Chat_main#0" />
-            <element signature="n#!!block;n#componentDidUpdate#0;n#Chat_main#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/sider/List-wrap/List-wrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="e#6#96#0" />
-            <element signature="e#113#235#0" />
-            <element signature="e#246#689#0" />
-            <element signature="e#706#740#0" />
-            <element signature="e#750#898#0" />
-            <element signature="e#932#959#0" />
-            <element signature="e#974#1044#0" />
-            <element signature="e#1057#1133#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducer/Chat_params_reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/chat-main/message_window/Message_window.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/sider/Sider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1120">
@@ -860,32 +790,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/sider/List-wrap/Friends/Friends.js">
+    <entry file="file://$PROJECT_DIR$/src/component/sider/List-wrap/List-wrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+        <state relative-caret-position="459">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/MyInfo/MyInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="65" column="72" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/sider/Head/Head.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="46" column="18" lean-forward="true" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#6#96#0" />
+            <element signature="e#113#235#0" />
+            <element signature="e#246#689#0" />
+            <element signature="e#706#740#0" />
+            <element signature="e#750#898#0" />
+            <element signature="e#932#959#0" />
+            <element signature="e#974#1044#0" />
+            <element signature="e#1057#1133#0" />
           </folding>
         </state>
       </provider>
@@ -900,14 +817,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/chat-main/message_window/Message_window.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/chat-main/message_window/Message_window.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#1947#3139#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/sider/Head/Head.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="46" column="18" lean-forward="true" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/MyInfo/MyInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1755">
+          <caret line="65" column="72" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducer/Chat_params_reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/sider/List-wrap/Friends/Friends.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="26" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/sider/List-wrap/List_wrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="142">
+          <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="87" selection-end-column="43" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
             <element signature="n#!!block;n#constructor#0;n#List_wrap#0" />
             <element signature="n#!!block;n#componentDidMount#0;n#List_wrap#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/sider/List-wrap/Message_list/Message_list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2592">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/Store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/chat-main/Chat_main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="298" lean-forward="true" selection-start-line="298" selection-end-line="298" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="n#!!block;n#getBase64#0" />
+            <element signature="n#!!block;n#beforeUpload#0" />
+            <element signature="n#!!block;n#constructor#0;n#Chat_main#0" />
+            <element signature="n#!!block;n#componentDidMount#0;n#Chat_main#0" />
+            <element signature="n#!!block;n#componentDidUpdate#0;n#Chat_main#0" />
+            <element signature="e#7037#9137#0" />
           </folding>
         </state>
       </provider>

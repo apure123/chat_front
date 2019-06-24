@@ -8,7 +8,7 @@ import axios from 'axios';
 import Friend_edit from "../FriendDetail/Friend_edit";
 import Update_info from "../update_info/Update_info";
 import { Button,Popconfirm } from "antd";
-import ajax_url from "../../ajax/ajax_url";
+import ajax_url from "../../server_config/ajax_url";
 
 
 class Chat_page extends React.Component{

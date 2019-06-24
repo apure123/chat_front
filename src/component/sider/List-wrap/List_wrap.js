@@ -7,7 +7,7 @@ import Nav from "./New_Friends/nav";
 import {connect} from "react-redux"
 import axios from "axios"
 
-import ajax_url from "../../../ajax/ajax_url";
+import ajax_url from "../../../server_config/ajax_url";
 import Message_list from "./Message_list/Message_list";
 import FriendDetail from "../../FriendDetail/FriendDetail";
 import Add_friend from "../../Add_friend/Add_friend";
@@ -68,10 +68,10 @@ class List_wrap extends Component{
                                   this.setState({selectkey:key})
                               }}
                         >
-                            {/*<Menu.Item key="1" >
+                            <Menu.Item key="1" >
                                 <Icon type="message" />
                                 消息
-                            </Menu.Item>*/}
+                            </Menu.Item>
                             <Menu.Item key="2">
                                 <Icon type="user" />
                                 好友
@@ -83,9 +83,9 @@ class List_wrap extends Component{
                         </Menu>
                     </Header>
                     <Content className={"list_wrap"} style={{backgroundColor:"#f0f0f0"}}>
-                        {/*{this.state.selectkey==="1"?<div>
+                        {this.state.selectkey==="1"?<div>
                             <Message_list  get_friend_data={this.get_friend_data}/>
-                        </div>:<div></div>}*/}
+                        </div>:<div></div>}
                         {this.state.selectkey==="2"?<div>
                          <Friends data={this.props.friend_list} get_friend_data={this.get_friend_data}/>
                         </div>:<div></div>}

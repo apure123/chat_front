@@ -2,7 +2,7 @@ import axios from 'axios';
 import {connect} from "react-redux";
 import React,{Component} from 'react';
 import { Modal, Button,Input,message } from 'antd';
-import ajax_url from "../../ajax/ajax_url";
+import ajax_url from "../../server_config/ajax_url";
 
 class Add_friend extends React.Component{
     constructor(props) {

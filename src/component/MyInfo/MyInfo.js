@@ -2,7 +2,7 @@ import axios from 'axios';
 import {connect} from "react-redux";
 import React,{Component} from 'react';
 import { Modal, Button,Avatar,message } from 'antd';
-import ajax_url from "../../ajax/ajax_url";
+import ajax_url from "../../server_config/ajax_url";
 
 class MyInfo extends React.Component{
     constructor(props) {

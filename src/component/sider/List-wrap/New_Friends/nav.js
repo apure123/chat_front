@@ -2,7 +2,7 @@ import React from 'react';
 import { List, Avatar, Button, Skeleton } from 'antd';
 import {connect} from "react-redux"
 import axios from 'axios';
-import ajax_url from "../../../../ajax/ajax_url";
+import ajax_url from "../../../../server_config/ajax_url";
 
 const count = 3;
 //var userID = 2;

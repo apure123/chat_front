@@ -8,7 +8,7 @@ import Message_window from "./message_window/Message_window";
 import Send_window from "./send_window/Send_window";
 import MyChat from "../Test_chat";
 import Friend_edit from "../Chat_page/chat_page";
-import ajax_url from "../../ajax/ajax_url";
+import ajax_url from "../../server_config/ajax_url";
 const { TextArea } = Input;
 var ws = new WebSocket("ws://127.0.0.1:8282");
 ws.pingInterval = 55;
@@ -222,10 +222,8 @@ class Chat_main extends React.Component{
 
 
                {/* 这里是消息窗口*/}
-                <Message_window message={message_perfriend} message_perfriend_Key={message_perfriend_Key}
-                                get_messageKey_by_friend_id={this.get_messageKey_by_friend_id }
-                                friend_id={this.props.friend_id}
-                />
+                {message_window_creator.get_message_window(this.props.friend_id,this.get_messageKey_by_friend_id)}
+
 
                 <div style={{height:"35%"}}>
                     <Form style={{height:"100%",marginBottom:"0px"}} >
@@ -300,8 +298,12 @@ export default Form.create()(Chat_main);
 
 
 
+//工厂类
 class message_window_creator {
-    static get_message_by_friend_id=(friend_id)=>{
-
+    static get_message_window=(friend_id,get_messageKey_by_friend_id)=>{
+            return(<Message_window
+                get_messageKey_by_friend_id={get_messageKey_by_friend_id }
+                friend_id={friend_id}
+            />)
     }
 }

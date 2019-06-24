@@ -30,15 +30,6 @@ class Message_window extends Component{
                 let friend_image_url="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
         friend_image_url=this.props.friend_imageUml
 
-       /* //遍历this.props.friend_list找出friend_image_url
-        for (let i = 0; i <this.props.friend_list.length ; i++) {
-            if (this.props.friend_list.length[i].friendID===this.props.friend_id){
-                if (this.props.friend_list.length[i].imageUrl&&this.props.friend_list.length[i].imageUrl!=="image.jpg") {
-                   //设置朋友的头像url
-                    friend_image_url=this.props.friend_list.length[i].imageUrl
-                }
-            }
-        }*/
 
 
         var message_perfriend_Key=this.props.get_messageKey_by_friend_id(this.props.friend_id)
