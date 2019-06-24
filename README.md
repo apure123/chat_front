@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+
+
+**接口url设置的位置**
+front\src\server_config
+
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
