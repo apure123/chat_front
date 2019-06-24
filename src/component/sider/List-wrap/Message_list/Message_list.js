@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {connect} from "react-redux"
 import axios from 'axios';
-import { Layout, Menu, Avatar,Icon ,List} from 'antd';
+import { Layout, Menu, Avatar,Icon ,List,Badge} from 'antd';
 import ajax_url from "../../../../server_config/ajax_url";
 
 
@@ -23,6 +23,8 @@ class Message_list extends Component{
         }
         //切换聊天窗口的绑定数据
 
+        //去掉头像未读小红点
+        this.props.set_a_contact_read(friend_id)
 
     }
 
@@ -90,11 +92,12 @@ class Message_list extends Component{
                         <List.Item>
                             <List.Item.Meta
                                 avatar={<span onClick={()=>this.open_friend_detail(item.contact)}>
+                                    <Badge dot={item.is_new}>
                                     {item.imageurl&&item.imageurl!=="image.jpg"?
                                         <Avatar src={item.imageurl} />:
                                         <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
                                     }
-
+                                    </Badge>
                                 </span>}
                                 title={<a onClick={()=>this.select_chat_friend(item.contact,item.remark,item.imageurl)}>{`备注：${item.remark}`}</a>}
                                 description={item.type==="1"?`${item.text}`:"[图片]"}
@@ -116,7 +119,7 @@ function mapStateToProps(state)
         userid:state.login.uid,
         visible:state.disflag.friend_detail_visible,
         friend_list:state.friend_list.friend_list,
-        contact_list:state.contact.contact_list
+        contact_list:[...state.contact.contact_list]
     }
 }
 
@@ -129,7 +132,11 @@ function mapDispatchToProps(dispatch){
         set_chat_params_friend_id:(friend_id)=>{dispatch({type:"set_chat_params_friend_id",friend_id:friend_id})},
         set_chat_params_friend_remark:(friend_remark)=>{dispatch({type:"set_chat_params_friend_remark",friend_remark:friend_remark})},
         set_contact_list:(contact_list)=>{dispatch({type:"set_contact_list",contact_list:contact_list})},
-    set_friend_imageUml:(friend_imageUml)=>{dispatch({type:"set_friend_imageUml",friend_imageUml:friend_imageUml})}
+    set_friend_imageUml:(friend_imageUml)=>{dispatch({type:"set_friend_imageUml",friend_imageUml:friend_imageUml})},
+        set_a_contact_read:(friend_id)=>{dispatch({
+            type:"set_a_contact_read",
+            friend_id:friend_id
+        })}
 
     }
 }

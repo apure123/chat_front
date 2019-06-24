@@ -64,13 +64,30 @@ class Chat_main extends React.Component{
             console.log("先打印消息的json对象")
             console.log(permessage)
             if (permessage.type==="text"){
-                this.props.add_message(permessage.data,"other",this.props.friend_id,"text")
+                this.props.add_message(permessage.data,"other",permessage.fromid,"text")
+
+                //更新侧边栏的会话列表
+                //不是当前聊天的发来的
+                if (permessage.fromid!==this.props.friend_id) {
+                    this.props.update_a_contact(permessage.fromid,permessage.data,true)
+                }else {//当前好友发过来的
+                    this.props.update_a_contact(permessage.fromid,permessage.data,false)
+                }
+
             }
             else if(permessage.type==="say_img"){
                 /*console.log(permessage)
                 console.log("++++++++++++++++++这里收到了一个图片+++++++++++++++++++++++++++++++++")
                 console.log(permessage.data)*/
-                this.props.add_message(permessage.data,"other",this.props.friend_id,"image")
+                this.props.add_message(permessage.data,"other",permessage.fromid,"image")
+
+                //更新侧边栏的会话列表
+                //不是当前聊天的发来的
+                if (permessage.fromid!==this.props.friend_id) {
+                    this.props.update_a_contact(permessage.fromid,"[图片]",true)
+                }else {//当前好友发过来的
+                    this.props.update_a_contact(permessage.fromid,"[图片]",false)
+                }
             }
             else {//其他的数据类型，比如说save
                 /*this.props.add_message(permessage.data,"other",this.props.friend_id,"text")*/
@@ -116,6 +133,9 @@ class Chat_main extends React.Component{
             let senddata_s=JSON.stringify(senddata)
             console.log(senddata_s)
         ws.send(senddata_s)
+
+        //更新侧边栏的会话列表
+        this.props.update_a_contact(toid,this.props.form.getFieldValue("message_input"),false)
     }
 
     //发送图片
@@ -129,6 +149,8 @@ class Chat_main extends React.Component{
         //加到消息窗口
         this.props.add_message(imageUrl,"me",this.props.friend_id,"image")
 
+        //更新侧边栏的会话列表
+        this.props.update_a_contact(toid,"[图片]",false)
 }
 
     //获取与这个好友聊天的记录对象在总记录数组中的位置
@@ -233,7 +255,7 @@ class Chat_main extends React.Component{
                                 rules: [],
                             })(
                                 <TextArea
-                                    placeholder="发送测试消息"
+                                    placeholder="发送消息"
                                     autosize={{ minRows: 6, maxRows: 6 }}
                                 />
                             )}
@@ -291,11 +313,19 @@ function mapDispatchToProps(dispatch){
             )},
         add_history_message:(friend_id,history_message)=>{dispatch(
             {type:"add_history_message",friend_id:friend_id,history_message:history_message}
-            )}
+            )},
+        update_a_contact:(friend_id,text,is_new)=>{dispatch({
+            type:"update_a_contact",
+            friend_id:friend_id,
+            text:text,
+            is_new:is_new
+        })}
     }
 }
 Chat_main=connect(mapStateToProps,mapDispatchToProps)(Chat_main)
 export default Form.create()(Chat_main);
+
+
 
 
 
