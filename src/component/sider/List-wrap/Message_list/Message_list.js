@@ -100,8 +100,9 @@ class Message_list extends Component{
                                     </Badge>
                                 </span>}
                                 title={<a onClick={()=>this.select_chat_friend(item.contact,item.remark,item.imageurl)}>{`备注：${item.remark}`}</a>}
-                                description={item.type==="1"?`${item.text}`:"[图片]"}
+                                description={item.type==="1"?`${limit_string_length(item.text)}`:"[图片]"}
                             />
+
                         </List.Item>
                     )}
                 />
@@ -142,3 +143,10 @@ function mapDispatchToProps(dispatch){
 }
 Message_list=connect(mapStateToProps,mapDispatchToProps)(Message_list)
 export default Message_list;
+
+
+function limit_string_length(str) {
+    if(str.length>20){
+        return str.substr(0,20)+"..."
+    }else return str
+}

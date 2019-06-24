@@ -58,7 +58,7 @@ class List_wrap extends Component{
         return(
                 <div>
                 <Layout style={{height:"100%"}}>
-                    <Header style={{padding:"0px",display:"flex",margin:"auto",width:"100%",height:"8vh"}}>
+                    <Content style={{padding:"0px",display:"flex",margin:"auto",width:"100%"}}>
                         <Menu defaultSelectedKeys={[this.state.selectkey]}
                               mode="horizontal"
                               theme="light"
@@ -81,7 +81,31 @@ class List_wrap extends Component{
                                 好友请求
                             </Menu.Item>
                         </Menu>
-                    </Header>
+                    </Content>
+                    {/*<Header style={{padding:"0px",display:"flex",margin:"auto",width:"100%",height:"8vh"}}>
+                        <Menu defaultSelectedKeys={[this.state.selectkey]}
+                              mode="horizontal"
+                              theme="light"
+                              style={{width:"100%"}}
+                              onClick={({ item, key, keyPath, domEvent })=>{
+                                  console.log(key)
+                                  this.setState({selectkey:key})
+                              }}
+                        >
+                            <Menu.Item key="1" >
+                                <Icon type="message" />
+                                消息
+                            </Menu.Item>
+                            <Menu.Item key="2">
+                                <Icon type="user" />
+                                好友
+                            </Menu.Item>
+                            <Menu.Item key="3">
+                                <Icon type="user-add" />
+                                好友请求
+                            </Menu.Item>
+                        </Menu>
+                    </Header>*/}
                     <Content className={"list_wrap"} style={{backgroundColor:"#f0f0f0"}}>
                         {this.state.selectkey==="1"?<div>
                             <Message_list  get_friend_data={this.get_friend_data}/>
@@ -94,7 +118,7 @@ class List_wrap extends Component{
                         </div>:<div></div>}
 
                     </Content>
-                    <Footer style={{height:"7vh",backgroundColor:"#305a56",padding:"12px 50px"}}>
+                    <Footer style={{backgroundColor:"#006284",padding:"12px 50px"}}>
                         <Button ghost size={"small"} style={{marginRight:"10px",float:"left"}} onClick={()=>this.props.set_update_info_visible(true)}>编辑个人信息</Button>
                         <Add_friend/>
                     </Footer>

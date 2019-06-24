@@ -256,7 +256,7 @@ class Chat_main extends React.Component{
                             })(
                                 <TextArea
                                     placeholder="发送消息"
-                                    autosize={{ minRows: 6, maxRows: 6 }}
+                                    autosize={{ minRows: 8, maxRows: 8 }}
                                 />
                             )}
                         </Form.Item>

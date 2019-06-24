@@ -36,17 +36,17 @@ class Chat_page extends React.Component{
     render() {
 
         return(
-            <div style={{backgroundColor:"#9da49b",width:"100%",height:"100%"}} >
+            <div style={{backgroundColor:"#7db9de",width:"100%",height:"100%"}} >
 
                 {!this.props.loginflag?<Redirect to={"/"}/>:""}
 
                 <div style={{width:"100%",display:"flex",margin:"auto"}}>
-                    <div style={{float:"left",width:"30%", backgroundColor:"#305a56"}}>
+                    <div style={{float:"left",width:"20%", backgroundColor:"#006284"}}>
                         <Sider/>
                     </div>
-                    <div style={{width:"70%",float:"right",height:"100vh",display:"block",backgroundColor:"#1da57a"}}>
+                    <div style={{width:"80%",float:"right",height:"100vh",display:"block",backgroundColor:"#ffffff"}}>
 
-                        <div style={{backgroundColor:"#fff", height:"7vh",float:"top"}} className={"message_header"}>
+                        <div style={{backgroundColor:"#f0f0f0", height:"7vh",float:"top"}} className={"message_header"}>
                             <h2 style={{float:"left",margin:"10px",marginLeft:"30px"}}>{this.props.chat_params_friend_remark}</h2>
 
                             <Popconfirm
@@ -56,7 +56,7 @@ class Chat_page extends React.Component{
                             disabled={this.props.friend_id==="0"}>删除消息记录</Button>
                             </Popconfirm>
                         </div>
-                        <div style={{backgroundColor:"#e0e7e3",height:"93vh"}}><Chat_main/></div>
+                        <div style={{backgroundColor:"#ffffff",height:"93vh"}}><Chat_main/></div>
 
                     </div>
 

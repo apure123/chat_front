@@ -1,6 +1,6 @@
 .Login{
-    background: url("../../image/登录1.jpg") no-repeat;
-    background-size: cover;
+    background: url("../../image/背景3.jpg") /*no-repeat*/;
+    background-size:  100% auto;
 
     display:inline-block;
     width: 100%;

@@ -44,7 +44,7 @@ class Message_window extends Component{
                         dataSource={[...this.props.all_message[message_perfriend_Key].messageList]}
                         renderItem={item => <div style={{width:"96%",margin:"2%"}}>{item.owner=="me"?
                             <List.Item
-                                style={{width:"60%",float:"right",margin:"10px",alignContent:"right"}}
+                                style={{width:"51%",float:"right",margin:"10px",alignContent:"right"}}
                             >
                                 {
                                     item.type==="image"?
@@ -53,8 +53,8 @@ class Message_window extends Component{
                                         </div>
                                     :
                                         <p style={{
-                                            width:"95%",backgroundColor:"#fff",float:"right",margin:"10px",padding:"10px",borderRadius:"5px"
-                                            ,wordWrap:"break-word",wordBreak:"break-all"
+                                            width:"95%",backgroundColor:"#2682f4",float:"right",margin:"10px",padding:"10px",borderRadius:"5px"
+                                            ,color:"#ffffff",wordWrap:"break-word",wordBreak:"break-all"
                                         }}
                                         >{item.content}</p>
                                 }
@@ -63,7 +63,7 @@ class Message_window extends Component{
                                 </div>
                             </List.Item>
                             :
-                            <List.Item style={{width:"60%",float:"left",margin:"10px"}}>
+                            <List.Item style={{width:"51%",float:"left",margin:"10px"}}>
                                 <div style={{float:"left"}}>
                                     <Avatar  src={friend_image_url} />
                                 </div>
@@ -74,7 +74,7 @@ class Message_window extends Component{
                                         </div>
                                         :
                                         <p style={{
-                                            width:"100%",backgroundColor:"#1da57a",float:"left",margin:"10px",padding:"10px",borderRadius:"5px"
+                                            width:"100%",backgroundColor:"#ececed",float:"left",margin:"10px",padding:"10px",borderRadius:"5px"
                                             ,wordWrap:"break-word",wordBreak:"break-all"
                                         }}
                                         >{item.content}</p>
